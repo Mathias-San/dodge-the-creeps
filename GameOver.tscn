@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/ui/Sprites/Highlights B/Default/button_circle_highlight.png" type="Texture" id=1]
+[ext_resource path="res://assets/ui/Sprites/Style C/Default/button_circle.png" type="Texture" id=2]
+[ext_resource path="res://GameOver.gd" type="Script" id=3]
+[ext_resource path="res://assets/ui/Sprites/Icons/Default/icon_arrow_rotate.png" type="Texture" id=4]
+[ext_resource path="res://assets/UI/Font/Kenney Future.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 21
+outline_size = 2
+outline_color = Color( 0.937255, 0.180392, 0.0588235, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 1 )
+script = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ButtonRectangleDepthFlat" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 265, 605.071 )
+scale = Vector2( 2.84843, -18.9353 )
+
+[node name="ButtonRectangleBorder" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 260, 337.25 )
+scale = Vector2( 2.21354, 4.71094 )
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 102.0
+margin_top = 234.0
+margin_right = 183.0
+margin_bottom = 287.0
+rect_scale = Vector2( 4, 4 )
+theme = SubResource( 3 )
+text = "GAME
+OVER"
+align = 1
+
+[node name="restart" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 162, 674 )
+scale = Vector2( 3.39062, 3.64062 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 1 )
+
+[node name="IconRepeatDark" type="Sprite" parent="CanvasLayer/restart"]
+position = Vector2( 34.212, 29.3906 )
+scale = Vector2( 0.90997, 0.869814 )
+texture = ExtResource( 4 )
+
+[connection signal="pressed" from="CanvasLayer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="CanvasLayer/restart" to="." method="_on_TouchScreenButton_pressed"]

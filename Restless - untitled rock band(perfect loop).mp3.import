@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Restless - untitled rock band(perfect loop).mp3-97f32712ef09ac692ef2c9eb853db1dc.mp3str"
+
+[deps]
+
+source_file="res://Restless - untitled rock band(perfect loop).mp3"
+dest_files=[ "res://.import/Restless - untitled rock band(perfect loop).mp3-97f32712ef09ac692ef2c9eb853db1dc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
